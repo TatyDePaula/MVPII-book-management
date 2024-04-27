@@ -1,0 +1,20 @@
+docker build -t mvpdocker .
+docker network create mynetwork
+
+docker run -d --name meu_mysql3 --network mynetwork \
+-e MYSQL_ROOT_PASSWORD=123 -e MYSQL_DATABASE=DBMVP \
+-e MYSQL_USER=user -e MYSQL_PASSWORD=123 \
+-e MYSQL_ALLOW_EMPTY_PASSWORD=yes mysql:latest
+
+
+
+para acessar o mysql dentro do docker e criar a tabela,
+mysql -uroot -p123 DBMVP
+e depois
+CREATE TABLE livros (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    autor VARCHAR(255) NOT NULL,
+    ano INT
+);
+

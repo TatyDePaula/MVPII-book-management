@@ -1,0 +1,26 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Minha API Flask",
+      "description": "Exemplo de API Flask com Swagger",
+      "version": "1.0"
+    },
+    "basePath": "/",
+    "paths": {
+      "/hello": {
+        "get": {
+          "summary": "Rota de exemplo",
+          "description": "Retorna uma mensagem de saudação",
+          "responses": {
+            "200": {
+              "description": "Operação bem-sucedida",
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
